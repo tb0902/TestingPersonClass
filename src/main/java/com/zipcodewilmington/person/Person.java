@@ -14,15 +14,18 @@ public class Person {
 // the above defines the STATE of the person.
 
     public Person() {
+        name = "";
+        age = Integer.MAX_VALUE;
 
     }
-    public Person(String name, int age) {
-       this.name = name;
-       this.age = age;
+
     // This is the default constructor
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
 
-// the above INITIALIZES the variables DEFINED in the state.
+    // the above INITIALIZES the variables DEFINED in the state.
     public Person(int age) {
         this.age = age;
     }
@@ -32,7 +35,7 @@ public class Person {
     }
 // Below is the constructor with everything else
 
-// Setters
+    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -40,7 +43,28 @@ public class Person {
     public void setAge(int age) {
         this.age = age;
     }
-// Getters
+
+    public void setMiddleInitial(char middleInitial) {
+        this.middleInitial = middleInitial;
+    }
+
+    public void setHeightInches(int heightInches) {
+        this.heightInches = heightInches;
+    }
+
+    public void setFavoriteFood(String favoriteFood) {
+        this.favoriteFood = favoriteFood;
+    }
+
+    public void setWearsGlasses(boolean wearsGlasses) {
+        this.wearsGlasses = wearsGlasses;
+    }
+
+    public void setHasPets(boolean hasPets) {
+        this.hasPets = hasPets;
+    }
+
+    // Getters
     public String getName() {
 
         return name;
@@ -59,5 +83,17 @@ public class Person {
     public Integer getHeightInches() {
 
         return heightInches;
+    }
+
+    public String getFavoriteFood() {
+        return favoriteFood;
+    }
+
+    public boolean getWearsGlasses() {
+        return wearsGlasses;
+    }
+
+    public boolean getHasPets() {
+        return hasPets;
     }
 }
